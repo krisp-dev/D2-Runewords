@@ -1,0 +1,55 @@
+.rune-list {
+   padding-block: $spacing-unit * 2;
+   background-color: $color-bg-alt;
+}
+
+.rune-list__heading {
+   margin: 0 0 $spacing-unit * 1.5;
+   font-family: $font-heading;
+   font-size: 1.4rem;
+   color: $color-accent;
+}
+
+.rune-list__grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+   gap: $spacing-unit * 0.75;
+}
+
+.rune-card {
+   background-color: rgba(0, 0, 0, 0.7);
+   border-radius: $border-radius-md;
+   border: 1px solid rgba(255, 255, 255, 0.04);
+   box-shadow: 0 0 0 1px rgba(224, 177, 90, 0.08);
+   overflow: hidden;
+   transition: transform 0.1s ease-out, box-shadow 0.1s ease-out,
+      border-color 0.1s ease-out;
+}
+
+.rune-card__button {
+   all: unset;
+   cursor: pointer;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: $spacing-unit * 0.75;
+   gap: $spacing-unit * 0.25;
+}
+
+.rune-card__icon {
+   width: 40px;
+   height: 40px;
+   object-fit: contain;
+}
+
+.rune-card__name {
+   font-size: 0.85rem;
+   text-transform: capitalize;
+   color: $color-text;
+}
+
+.rune-card:hover {
+   transform: translateY(-2px);
+   box-shadow: $shadow-soft;
+   border-color: $color-accent-soft;
+}
