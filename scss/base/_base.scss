@@ -12,7 +12,8 @@ body {
 
 body {
    min-height: 100vh;
-   font-family: $font-base;
+   font-family: $font-body;
+   font-weight: 300;
    color: $color-text;
    background-color: $color-bg;
    line-height: 1.5;

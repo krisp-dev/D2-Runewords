@@ -1,0 +1,29 @@
+@font-face {
+   font-family: "Exocet";
+   src: url("../assets/fonts/exocet/Exocet-Heavy.woff2") format("woff2"),
+      url("../assets/fonts/exocet/Exocet-Heavy.woff") format("woff"),
+      url("../assets/fonts/exocet/Exocet-Heavy.ttf") format("truetype");
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Exocet";
+   src: url("../assets/fonts/exocet/Exocet-Medium.woff2") format("woff2"),
+      url("../assets/fonts/exocet/Exocet-Medium.woff") format("woff"),
+      url("../assets/fonts/exocet/Exocet-Medium.ttf") format("truetype");
+   font-weight: 500;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Exocet";
+   src: url("../assets/fonts/exocet/Exocet-Light.woff2") format("woff2"),
+      url("../assets/fonts/exocet/Exocet-Light.woff") format("woff"),
+      url("../assets/fonts/exocet/Exocet-Light.ttf") format("truetype");
+   font-weight: 300;
+   font-style: normal;
+   font-display: swap;
+}
