@@ -24,19 +24,29 @@
 }
 
 .runeword-card {
-   background: #0a0a0a;
+   background: rgba(0, 0, 0, 0.4);
    padding: 1rem 1.2rem;
-   border: 2px solid #000;
+   border: 2px solid #46331f;
    outline: 1px solid #c8a567;
    border-radius: 4px;
-
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), inset 0 0 12px rgba(0, 0, 0, 0.8);
-
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
    color: #dcdcdc;
    font-family: "Exocet", serif;
    text-align: center;
-   //max-width: 420px;
    margin-inline: auto;
+
+   display: flex;
+   gap: 1rem;
+
+   &__icon {
+      height: auto;
+      image-rendering: pixelated;
+      align-content: center;
+   }
+
+   &__content {
+      flex: 1;
+   }
 
    &__runes {
       display: block;

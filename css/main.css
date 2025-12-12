@@ -226,17 +226,34 @@ ul {
 }
 
 .runeword-card {
-  background: #0a0a0a;
+  background: rgba(0, 0, 0, 0.4);
   padding: 1rem 1.2rem;
-  border: 2px solid #000;
+  border: 2px solid #46331f;
   outline: 1px solid #c8a567;
   border-radius: 4px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), inset 0 0 12px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), inset 0 0 12px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   color: #dcdcdc;
   font-family: "Exocet", serif;
   text-align: center;
   margin-inline: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+.runeword-card__icon {
+  height: auto;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: pixelated;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.runeword-card__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .runeword-card__runes {
   display: block;

@@ -2,6 +2,7 @@ import { CLASSES } from "./data/classes.js";
 import { ITEM_TYPES } from "./data/itemTypes.js";
 import { RUNES } from "./data/runes.js";
 import { RUNEWORDS } from "./data/runewords.js";
+import { getRandomItemTypeSprite } from "./utils/getRandomItemTypeSprite.js";
 
 // STATE
 const selectedRunes = new Set(); //holds rune names
@@ -96,8 +97,15 @@ function updateRunewordResults() {
          ? rw.effects.map((effect) => `<li>${effect}</li>`).join("")
          : "";
 
+      const sprite = getRandomItemTypeSprite(rw.itemType);
+
       li.innerHTML = `
       <article class="runeword-card">
+      <div class="runeword-card__icon">
+         <img src="${sprite}" alt="${rw.itemType.join(", ")} icon" />
+      </div>
+
+      <div class="runeword-card__content">
         <header class="runeword-card__header">
           <h3 class="runeword-card__name">${rw.name}</h3>
           <div class="runeword-card__meta">
@@ -114,6 +122,7 @@ function updateRunewordResults() {
         <ul class="runeword-card__effects">
           ${effectsList}
         </ul>
+      </div>
       </article>
     `;
 
