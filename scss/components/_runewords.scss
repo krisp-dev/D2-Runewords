@@ -38,10 +38,22 @@
    display: flex;
    gap: 1rem;
 
+   @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
+   }
+
    &__icon {
       height: auto;
       image-rendering: pixelated;
       align-content: center;
+
+      img {
+         @media (max-width: 500px) {
+            max-width: 50%;
+            display: inline;
+         }
+      }
    }
 
    &__content {

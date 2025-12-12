@@ -87,6 +87,11 @@ ul {
   text-transform: uppercase;
   color: #f3e6d0;
 }
+@media (max-width: 500px) {
+  .site-header__title {
+    font-size: clamp(2.4rem, 6vw, 2rem);
+  }
+}
 .site-header__subtitle {
   margin: 0;
   font-family: "Exocet", serif;
@@ -242,6 +247,17 @@ ul {
   display: flex;
   gap: 1rem;
 }
+@media (max-width: 500px) {
+  .runeword-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .runeword-card__icon {
   height: auto;
   -ms-interpolation-mode: nearest-neighbor;
@@ -249,6 +265,12 @@ ul {
       image-rendering: pixelated;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+@media (max-width: 500px) {
+  .runeword-card__icon img {
+    max-width: 50%;
+    display: inline;
+  }
 }
 .runeword-card__content {
   -webkit-box-flex: 1;
@@ -302,6 +324,64 @@ ul {
   font-size: 0.85rem;
   color: #999;
   margin-bottom: 0.4rem;
+}
+
+.filters {
+  margin: 1rem 0 1.25rem;
+}
+.filters__heading {
+  font-family: "Exocet", serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f3e6d0;
+  margin-bottom: 1.5rem;
+}
+.filters__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.75rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+@media (max-width: 500px) {
+  .filters__row {
+    grid-template-columns: 1fr;
+  }
+}
+.filters__label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  color: #b3b3b3;
+}
+.filters__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.filters__value {
+  min-width: 2.5ch;
+  text-align: right;
+  color: #f3e6d0;
+  font-weight: 600;
+}
+.filters__select,
+.filters #levelFilter {
+  width: 100%;
+}
+.filters__select {
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(224, 177, 90, 0.25);
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
 }
 
 html,

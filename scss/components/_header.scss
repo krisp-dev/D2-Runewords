@@ -22,6 +22,10 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: $color-accent;
+
+      @media (max-width: 500px) {
+         font-size: clamp(2.4rem, 6vw, 2rem);
+      }
    }
 
    &__subtitle {

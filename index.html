@@ -26,6 +26,50 @@
             </div>
          </section>
 
+         <section class="filters">
+            <div class="container">
+               <h2 class="filters__heading">Filters</h2>
+               <div class="filters__row">
+                  <!-- Level -->
+                  <div class="filter">
+                     <label class="filter__label" for="levelFilter"
+                        >Max Level</label
+                     >
+                     <div class="filter__control">
+                        <input
+                           id="levelFilter"
+                           type="range"
+                           min="1"
+                           max="99"
+                           value="99"
+                        />
+                        <span class="filter__value" id="levelValue">99</span>
+                     </div>
+                  </div>
+
+                  <!-- Class -->
+                  <div class="filter">
+                     <label class="filter__label" for="classFilter"
+                        >Class</label
+                     >
+                     <select id="classFilter" class="filter__select">
+                        <option value="">Any</option>
+                     </select>
+                  </div>
+
+                  <!-- Item Type -->
+                  <div class="filter">
+                     <label class="filter__label" for="itemTypeFilter"
+                        >Item Type</label
+                     >
+                     <select id="itemTypeFilter" class="filter__select">
+                        <option value="">Any</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+         </section>
+
          <section class="runewords">
             <div class="container">
                <h2 class="runewords__heading">Matching Runewords</h2>
