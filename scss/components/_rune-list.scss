@@ -1,55 +1,92 @@
 .rune-list {
-   padding-block: $spacing-unit * 2;
-   background-color: $color-bg-alt;
+   margin-top: 2rem;
+
+   &__heading {
+      @include exocet-heading(1.4rem, 500, 0.18em);
+      color: $color-accent;
+      margin-bottom: 1.5rem;
+   }
+
+   // The grid that holds ALL runes
+   &__grid {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      display: grid;
+      grid-template-columns: repeat(8, minmax(70px, 1fr));
+      gap: 1.5rem 1.8rem;
+      justify-items: center;
+   }
+
+   // Each <li>
+   &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
 }
 
-.rune-list__heading {
-   margin: 0 0 $spacing-unit * 1.5;
-   font-family: $font-exocet;
-   font-size: 1.4rem;
-   color: $color-accent;
-}
-
-.rune-list__grid {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-   gap: $spacing-unit * 0.75;
-}
-
-.rune-card {
-   background-color: rgba(0, 0, 0, 0.7);
-   border-radius: $border-radius-md;
-   border: 1px solid rgba(255, 255, 255, 0.04);
-   box-shadow: 0 0 0 1px rgba(224, 177, 90, 0.08);
-   overflow: hidden;
-   transition: transform 0.1s ease-out, box-shadow 0.1s ease-out,
-      border-color 0.1s ease-out;
-}
-
-.rune-card__button {
-   all: unset;
+// The button that wraps stone + label
+.rune-button {
+   background: transparent;
+   border: none;
+   padding: 0;
    cursor: pointer;
+
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding: $spacing-unit * 0.75;
-   gap: $spacing-unit * 0.25;
+   gap: 0.35rem;
+
+   color: $color-accent;
+   text-decoration: none;
+
+   transition: transform 0.12s ease-out, filter 0.12s ease-out;
+
+   // The rune image (stone)
+   &__image {
+      display: block;
+      width: 45px;
+      height: auto;
+      filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.9));
+      transition: filter 0.15s ease, transform 0.15s ease;
+   }
+
+   // The rune label (“EL”, “TIR”, “SHAEL”…)
+   &__name {
+      font-family: $font-exocet;
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: $color-accent;
+   }
+
+   // Hover effect
+   &:hover &__image {
+      filter: brightness(1.1) contrast(1.1)
+         drop-shadow(0 0 12px rgba(224, 177, 90, 0.9));
+      transform: translateY(-2px);
+   }
+
+   // Active state
+   &--active &__image {
+      filter: brightness(1.3) contrast(1.5)
+         drop-shadow(0 0 12px rgba(224, 177, 90, 0.9));
+      transform: translateY(-3px);
+   }
 }
 
-.rune-card__icon {
-   width: 40px;
-   height: 40px;
-   object-fit: contain;
+// Responsive tweaks
+@media (max-width: 900px) {
+   .rune-list__grid {
+      grid-template-columns: repeat(5, minmax(60px, 1fr));
+   }
 }
 
-.rune-card__name {
-   font-size: 0.85rem;
-   text-transform: capitalize;
-   color: $color-text;
-}
-
-.rune-card:hover {
-   transform: translateY(-2px);
-   box-shadow: $shadow-soft;
-   border-color: $color-accent-soft;
+@media (max-width: 600px) {
+   .rune-list__grid {
+      grid-template-columns: repeat(4, minmax(60px, 1fr));
+   }
 }

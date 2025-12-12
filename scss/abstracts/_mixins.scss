@@ -1,0 +1,7 @@
+@mixin exocet-heading($size, $weight: 700, $spacing: 0.15em) {
+   font-family: $font-exocet;
+   font-size: $size;
+   font-weight: $weight;
+   letter-spacing: $spacing;
+   text-transform: uppercase;
+}
